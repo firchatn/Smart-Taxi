@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Taxi|Compteur</title>
+  <style type="text/css">
+    .basic-font(){
+  font-family: 'ArialN', arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  color: #000;
+  
+}
+
+body{
+  background-color: #FAA41A;
+}
+
+.round {
+  position: relative;
+  /*display: inline-block;*/
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 15px solid #ccc;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  
+  -webkit-border-radius: 100px;
+  /* Firefox 1-3.6 */
+  
+  -moz-border-radius: 100px;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  
+  border-radius: 100px;
+  margin: auto;
+  padding: 10px;
+ 
+
+}
+
+.num {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 30px;
+  color: #999;
+}
+
+.find-me {
+  position: relative;
+  display: block;
+  clear: both;
+  floar: left;
+  margin: 100px;
+  color: #000;
+}
+
+body{
+  .basic-font();
+}
+
+.preloader{
+  position: relative;
+  width: 166px;
+  margin: 50px auto 0;
+}
+
+.taxi-category:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.static-left{
+  float: left;
+}
+
+.static-right{
+  float: right;
+}
+
+.cube {
+  height: 46px;
+  position: absolute;
+  top: 0;
+  right: 60px;
+  transform-origin: 50% 50% 0;
+  -webkit-transform-origin: 50% 50% 0;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  animation: letter 1.5s infinite ease-out;
+  -webkit-animation: letter 1.5s infinite ease-out;
+  animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+}
+
+.top {
+  transform: rotateX(90deg) translateY(0) translateZ(24px);
+  -webkit-transform: rotateX(90deg) translateY(0) translateZ(24px);
+}
+
+.front {
+  transform: rotateX(0deg) translateZ(24px);
+  -webkit-transform: rotateX(0deg) translateZ(24px);
+}
+
+.letter{
+  display: inline-block;
+  width: 28px;
+  text-align: center;
+  position: relative;
+  padding: 0 5px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #FAA41A;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.letter-black{
+  background-color: #000;
+}
+
+.letter-move{
+  position: absolute;
+  left: 50%;
+  margin-left: -20px; 
+}
+
+.taxi-name{
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+@keyframes letter {
+  0% {
+    transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+  }
+  70% {
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+  }
+}
+  </style>
+</head>
+
+<body>
+	  <div class="preloader">
+    <div class="taxi-category">
+      <div class="static-left">
+        <span class="letter">T</span>
+        <span class="letter letter-black">A</span>
+      </div>
+      <div class="cube">
+        <span class="letter letter-move top">X</span>
+        <span class="letter letter-move front">X</span>
+      </div>
+			      <div class="static-right">
+        <span class="letter letter-black">I</span>
+      </div>
+		    </div>
+		    <div class="taxi-name">COMFORT</div>
+  	</div>
+
+    <div id="count" class="round">
+      <div id="va" class="num"> 0 DT</div>
+    </div>
+
+
+    <script>
+function course(){
+  var x = document.getElementById("va");
+  var oldv = x.textContent;
+  var newv = 0 ;
+  newv = parseInt(oldv) + 30 ;
+  x.innerText = newv.toString()+ "DT";
+
+
+    setTimeout(course, 15000);
+}
+
+course();
+    </script>
+    <script src="./vendor/jquery/jquery-3.2.1.min.js"></script>
+</body>
+</html>
