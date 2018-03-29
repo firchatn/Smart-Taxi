@@ -1,19 +1,3 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Smart Taxi|Oucuper</title>
-  <link rel="stylesheet" type="text/css" href="./css/oucuper.css">
-  <script src="./js/oucuper.js"></script>
-</head>
-<body style="background-color: black">
-  <canvas width=300 height=300 id="myCanvas"></canvas>
-  <h1>Oucuper</h1>
-  <script type="text/javascript">
-  	
-
-  	// Anthony Gomez sur la base du script de M.Buffa
-
 window.onload = init;
 let canvas, ctx;
 let couleurSkin = "#fff7cc";
@@ -226,6 +210,3 @@ function dessinePiedDroit(){
   ctx.fillRect(0, 75, 35, 10);
   ctx.restore();
 }
-  </script>
-  </body>
-</html>

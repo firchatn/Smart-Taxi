@@ -1,0 +1,11 @@
+  	#myCanvas {
+  border: none;
+  background-color:black;
+  width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+h1  {
+  color : red;
+  text-align :center;
+}

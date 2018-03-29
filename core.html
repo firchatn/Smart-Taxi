@@ -3,143 +3,14 @@
     <title>Smart Taxi|Core</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/core.css">
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./js/core.js"></script>
 
-    <style>
-    .mobile-wrapper{
-	width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* ALL MOBILES */
-
-body{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-	background-color: #eee;
-}
-
-a{
-	text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6{
-	color: #fff;
-	font-weight: 200;
-	margin: 0;
-	padding: 10px 0;
-}
-
-.mobile{
-	max-width: 300px;
-	width: 100%;
-	height: 500px;
-	background-color: #eee;
-	overflow: hidden;
-	position: relative;
-	display: inline-block;
-}
-
-.mobile .header{
-	background-color: #3C3842;
-	color: #fff;
-	padding: 10px;
-}
-
-.line{
-	width: 30px;
-	height: 2px;
-	margin: 10px 0;
-	background-color: #fff;
-}
-
-.menu-toggle:hover{
-	cursor: pointer;
-}
-
-.mobile-nav ul{
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-}
-
-
-/* MOBILE THREE */
-
-.mobile-three{
-	background: #FAA41A;
-    background: -webkit-linear-gradient(#e743c3, #b59ccf); 
-    background: -o-linear-gradient(#e743c3, #b59ccf); 
-    background: -moz-linear-gradient(#e743c3, #b59ccf); 
-    background: linear-gradient(#f2ff1d, #d7cb4a)
-}
-
-.mobile-three .mobile-nav{
-	background-color: #3C3842;
-	width: 100px;
-	height: 100%;
-	text-align: center;
-	transform: translate(-100%);
-	-webkit-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-}
-
-.mobile-three .mobile-nav{
-    text-align: center;
-}
-
-.mobile-three .mobile-nav li a{
-	display: block;
-	padding: 25px 0;
-	color: #fff;
-}
-
-.mobile-three .mobile-nav li a:hover{
-	background-color: #FAA41A;
-}
-
-
-/* MOBILE FOUR */
-
-.mobile-four{
-	background: #1d1c29;
-    background: -webkit-linear-gradient(#1d1c29, #2f254b); 
-    background: -o-linear-gradient(#1d1c29, #2f254b); 
-    background: -moz-linear-gradient(#1d1c29, #2f254b); 
-    background: linear-gradient(#1d1c29, #2f254b);
-}
-
-.mobile-four .mobile-nav{
-	background-color: #3C3842;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transform: translate(0, -999%);
-	-webkit-transition: all 0.6s ease-in-out;
-	-o-transition: all 0.6s ease-in-out;
-	transition: all 0.6s ease-in-out;
-}
-
-.mobile-four .mobile-nav li a{
-	color: #989AA4;
-	display: block;
-	padding: 15px 20px;
-}
-
-.mobile-four .mobile-nav li a:hover{
-	color: #fff;
-}
-    </style>
 </head>
 <body>
 <div class="mobile-wrapper">
-
-
-
 		<div class="mobile mobile-three">
 			<div class="header">
 				<div class="menu-toggle">
@@ -150,37 +21,15 @@ h1, h2, h3, h4, h5, h6{
 			<div class="mobile-nav">
 				<ul>
 					<li><a href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-taxi fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="compteur.html"><i class="fa fa-taxi fa-2x" aria-hidden="true"></i></a></li>
 					<li><a href="#"><i class="fa fa-dollar fa-2x" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-toggle-off fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="oucuper.html"><i class="fa fa-toggle-off fa-2x" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>
 					
 				</ul>
 			</div>
 		</div>
-
-
-    </div>
-    <script>
-        $(document).ready(function() {
-
-//MOBILE ONE AND MOBILE THREE
-var menu = "close";
-$(".mobile-one .menu-toggle, .mobile-three .menu-toggle").click(function() {
-    
-    if (menu === "close") {
-      	$(this).parent().next(".mobile-nav").css("transform", "translate(0, 0)");
-     	 menu = "open";
-    } else {
-      	$(this).parent().next(".mobile-nav").css("transform", "translate(-100%, 0)");
-      	menu = "close";
-    }
-});
-
-});
-
-    </script>
-    	
+    </div>    	
         <!--===============================================================================================-->
             <script src="vendor/animsition/js/animsition.min.js"></script>
         <!--===============================================================================================-->
