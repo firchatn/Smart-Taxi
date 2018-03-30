@@ -210,3 +210,5 @@ function dessinePiedDroit(){
   ctx.fillRect(0, 75, 35, 10);
   ctx.restore();
 }
+
+
