@@ -5,7 +5,6 @@ p.addEventListener("click",stop);
 var on = true;
 
 function stop(){
-  console.log("stop");
   on = false;
 }
 
