@@ -13,7 +13,7 @@ var skins = ["#fff7cc","#ffa400","#835c3b","#2f2323"];
 var indice = 0;
 
 function init() {
-  console.log("page chargée");
+  
   
   canvas = document.querySelector("#myCanvas");
  
@@ -42,17 +42,17 @@ function animeBonhomme() {
   if(frame == 59){ // au bout d'une seconde : 60 frames = 1 seconde
     time++;
     frame = 0;
-    console.log(time);
+ 
   }
   if(time == timeLimit){
     time = 0;
     if(state == true){
       state = false;
-      console.log(state);
+    
     }
     else if(state == false){
       state = true;
-      console.log(state);
+;
     }
   }
   if(state == true){
