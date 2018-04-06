@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/core.css">
+    <link rel="stylesheet" type="text/css" href="./css/audio.css">
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="./js/core.js"></script>
 
@@ -19,8 +20,33 @@
 				<div class="menu-toggle">
 					<div class="line"></div>
 					<div class="line"></div>
-				</div>
+                </div>
+                
             </div>
+            
+            <div class="wrapper">
+
+                <div class="tower">
+                    <div class="signal">
+                        <div class="rings circle animated"></div>
+                    </div>
+                    <div class="dot circle"></div>
+                    <div id="play" class="triangle"></div>
+                </div>
+                
+                <div class="player circle">
+                    <div class="buffering circle animated"></div>
+                    <div class="triangle"></div>
+                </div>
+                <audio id="myAudio" controls autoplay hidden="true" src="test.mp3"></audio>
+                <div class="text">
+                    <div class="pulsing animated">Mosaique FM</div>
+                </div>
+                
+                </div> 
+                
+
+
 			<div class="mobile-nav">
 				<ul>
 					<li><a href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></li>
@@ -50,5 +76,6 @@
             <script src="vendor/countdowntime/countdowntime.js"></script>
         <!--===============================================================================================-->
             <script src="js/main.js"></script>
+            <script src="js/audio.js"></script>
     </body>
     </html>
