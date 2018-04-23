@@ -38,7 +38,7 @@
                     <div class="buffering circle animated"></div>
                     <div class="triangle"></div>
                 </div>
-                <audio id="myAudio" controls autoplay hidden="true" src="test.mp3"></audio>
+                <audio id="myAudio" controls autoplay hidden="true" src="http://expressfm.ice.infomaniak.ch/expressfm-64.mp3"></audio>
                 <div class="text">
                     <div class="pulsing animated">Mosaique FM</div>
                 </div>
@@ -77,5 +77,24 @@
         <!--===============================================================================================-->
             <script src="js/main.js"></script>
             <script src="js/audio.js"></script>
+<script>
+console.log('hddi');
+function togglePlay() {
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+};
+var x = document.getElementById("myAudio"); 
+$('.triangle').click(function() {
+console.log('hi');
+// x.play();
+togglePlay()
+
+    
+});
+</script>
+
+
+
+
+
     </body>
     </html>
