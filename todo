@@ -1,4 +1,4 @@
-maher + ali : project taxi 
+project taxi 
 	features : 
 		- login ( forget password )
 		- singup ( by admin + admin create a user account for new driver) 
